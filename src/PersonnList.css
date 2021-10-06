@@ -1,0 +1,11 @@
+li {
+    list-style: none;
+}
+
+li:nth-child(even) {
+    background: #CCC
+}
+
+li:nth-child(odd) {
+    background: #FFF
+}
