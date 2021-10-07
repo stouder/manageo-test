@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import PersonnList from './PersonnList';
+import FormPersonn from './FormPersonn';
 import { Component } from 'react';
 
 
@@ -9,7 +10,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            people: []
+            people: [],
+            isUpdateForm: false
         }
     }
 
@@ -43,16 +45,18 @@ class App extends Component {
 
     //fonction qui modifie dans la liste la personne avec id passé en parametre
     update = (id) => {
-
-	
+        this.setState({ isUpdateForm: true });
     }
 
     render() {
         return ( < div className = "App" >
-            <PersonnList people = { this.state.people }
-            deleteById = {this.delete}
-            updateById = {this.update}
-            /> </div > )
+                <
+                PersonnList people = { this.state.people }
+                deleteById = { this.delete }
+                updateById = { this.update }
+                />   { this.state.isUpdateForm ? < FormPersonn / >: "false"
+            } <
+            /div> )
     }
 }
 

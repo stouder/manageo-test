@@ -1,19 +1,19 @@
-import {Formik} from 'formik';import logo from './logo.svg';
-import './App.css';
-import PersonnList from './PersonnList';
+import React from 'react';
 import { Component } from 'react';
-import {Formik,Field} from 'formik';
+import { Formik, Field } from 'formik';
 
-class FormPersonn extends Component {
-
-   
-
+class FormPersonn extends React.Component {
     render() {
-        return ( 
-            <Formik>
-            
-            </Formik>)
+        return ( < Formik >
+
+            <
+            Field type = "email"
+            name = "email"
+            placeholder = "Email" / >
+            <
+            /
+            Formik > )
     }
 }
 
-export default App;
+export default FormPersonn;
